@@ -51,4 +51,22 @@ urlpatterns = [
         delete_book,
         name='delete-book'
     ),
+        
+    path(
+        'books/<int:pk>/borrow/',
+        borrow_book,
+        name='borrow-book'
+    ),
+
+    path(
+        'my-books/',
+        my_books,
+        name='my-books'
+    ),
+
+    path(
+        'return-book/<int:pk>/',
+        return_book,
+        name='return-book'
+    ),
 ]
